@@ -3,27 +3,19 @@ module.exports = function sym() {
   var result = [];
 
   result = arrays.reduce(function(a, b) {
-    var temp = [];
-    var aIndex = 0;
-    var bIndex = 0;
-    var i = 0;
+    var temp = a.concat(b).filter(function(value, index, arr) {
+      return arr.indexOf(value) === index;
+    });
 
-    for (i = 0; i < b.length; i++) {
-      aIndex = a.indexOf(b[i]);
-      bIndex = temp.indexOf(b[i]);
-
-      if (aIndex === -1 && bIndex === -1) {
-        temp.push(b[i]);
+    return temp.filter(function(value) {
+      if (a.indexOf(value) === -1 || b.indexOf(value) === -1) {
+        return true;
       }
 
-      else if (aIndex >= 0) {
-        a.splice(aIndex, 1);
+      else {
+        return false;
       }
-    }
-
-    // console.log(temp, a);
-
-    return a.concat(temp);
+    });
   }, []);
 
   return result.sort(function(a, b) { return a > b; });
