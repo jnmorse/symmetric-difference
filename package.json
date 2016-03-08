@@ -1,6 +1,6 @@
 {
   "name": "symmetric-differnce",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "App to find symmetric differences between arrays",
   "main": "src/index.js",
   "private": true,
@@ -27,6 +27,5 @@
     "expect.js": "^0.3.1",
     "mocha": "^2.4.5"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
