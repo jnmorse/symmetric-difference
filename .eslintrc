@@ -23,8 +23,7 @@
     "sourceType": "module"
   },
   "plugins": [
-    "react",
-    "html"
+    "react"
   ],
   "rules": {
     "block-scoped-var": 0,
