@@ -1,5 +1,5 @@
 {
-  "name": "symmetric-differnce",
+  "name": "symmetric-difference",
   "version": "0.0.2",
   "description": "App to find symmetric differences between arrays",
   "main": "src/index.js",

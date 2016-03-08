@@ -4,12 +4,12 @@ Project for Free Code Camp
 
 ## Installing
 
-`npm install jnmorse/symmetric-differnce`
+`npm install jnmorse/symmetric-difference`
 
 ## Usage
 
 ```javascript
-var sym = require('symmetric-differnce');
+var sym = require('symmetric-difference');
 
 sym([1, 2, 3], [5, 2, 1, 4])
 ```
