@@ -5,6 +5,8 @@
   "main": "src/index.js",
   "private": true,
   "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm --silent run lint",
     "test": "mocha"
   },
   "repository": {
@@ -25,7 +27,8 @@
   "homepage": "https://github.com/jnmorse/symmetric-difference#readme",
   "devDependencies": {
     "babel-eslint": "^10.0.2",
-    "eslint": "^5.16.0",
+    "eslint": "^6.0.1",
+    "eslint-config-jnmorse": "^2.5.0",
     "expect.js": "^0.3.1",
     "mocha": "^6.1.4"
   },

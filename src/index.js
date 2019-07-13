@@ -1,16 +1,18 @@
-module.exports = function sym() {
-  var arrays = Array.prototype.slice.call(arguments);
-  var result = [];
+module.exports = function sym(...arrays) {
+  // const arrays = Array.prototype.slice.call(arguments);
+  let result = [];
 
-  result = arrays.reduce(function(previous, current) {
-    var temp = previous.concat(current).filter(function(value, index, arr) {
+  result = arrays.reduce((previous, current) => {
+    const temp = previous.concat(current).filter((value, index, arr) => {
       return arr.indexOf(value) === index;
     });
 
-    return temp.filter(function(value) {
+    return temp.filter(value => {
       return previous.indexOf(value) === -1 || current.indexOf(value) === -1;
     });
   }, []);
 
-  return result.sort(function(a, b) { return a > b; });
+  return result.sort((a, b) => {
+    return a > b;
+  });
 };
